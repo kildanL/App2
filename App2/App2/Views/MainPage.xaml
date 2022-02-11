@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ViewModel="clr-namespace:App2.ViewModel"
+             x:Class="App2.MainPage">
+    <ContentPage.BindingContext>
+        <ViewModel:MainPageViewModel></ViewModel:MainPageViewModel>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout>
+        <Button Text="Fill" Command="{Binding Fill}"></Button>
+        <ListView x:Name="Comments_List" ItemsSource="{Binding Source}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" Detail="{Binding body}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+</ScrollView>
+</ContentPage>

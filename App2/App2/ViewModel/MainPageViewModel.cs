@@ -34,7 +34,7 @@ namespace App2.ViewModel
 
         public ICommand Fill => new Command(OnRequest);
    
-        private const string url = "https://192.168.1.101:26333/Test/GetSome";
+        private const string url = "https://192.168.1.101/Test/GetSome";
 
         public object Source
         {
